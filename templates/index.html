@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="container">
+    <form action="" method="POST" class="form" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button id="inference" type="submit" class="btn btn-success" style="margin-top: 20px;">
+        SEND
+      </button>
+    </form>
+  </div>
+
+{% endblock %}

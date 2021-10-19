@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="container" style="margin-top: 20px;">
+    <form action="" method="POST">{% csrf_token %}
+      <p>{{ form.username.help_text }}</p>
+      {{ form.username }}
+      <p>{{ form.password1.help_text }}</p>
+      {{ form.password1 }}
+      <p>{{ form.password2.help_text }}</p>
+      {{ form.password2 }}
+
+      {% if form.errors %}
+        {% for field in form %}
+          {% for error in field.errors %}
+            <p style="color: red;">{{ error }}</p>
+          {% endfor %}
+        {% endfor %}
+      {% endif %}
+
+      <div style="margin-top: 20px">
+        <button id="send-signup" type="submit" value="signup" class="btn btn-success">登録</button>
+      </div>
+    </form>
+  </div>
+
+{% endblock %}
