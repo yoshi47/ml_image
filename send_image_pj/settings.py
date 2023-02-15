@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-t3jm)div*nvcv-58dk)*i(%%qu40-aw$okm=79l9anuow0gjv_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['kika-ml.herokuapp.com/']
 
 # Application definition
 
